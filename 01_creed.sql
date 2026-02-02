@@ -1,0 +1,12 @@
+IF DB_ID('InventoryOps') IS NOT NULL
+BEGIN
+    ALTER DATABASE InventoryOps SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+    DROP DATABASE InventoryOps;
+END
+GO
+
+CREATE DATABASE InventoryOps;
+GO
+
+USE InventoryOps;
+GO
